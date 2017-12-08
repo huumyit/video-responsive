@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick-theme.css"/>
+<style type="text/css">
+.video-item {
+    width: 100%;
+}
+
+.video-inner {
+    width: 100%;
+    height: 0;
+    position: relative;
+    padding-bottom: 56.25%;
+}
+
+.video-item iframe {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* height: 100%; */
+}
+.slick-next {
+	right: 20px;
+}
+.slick-prev {
+	left: 20px;
+}
+</style>
+
+<body>
+    <h2>Video scale</h2>
+    <div class="video-container fade-carousel">
+        <div class="video-item">
+            <div class="video-inner">
+                <iframe height="400" src="https://www.youtube.com/embed/DU0ktWago84" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="video-item">
+            <div class="video-inner">
+                <iframe height="400" src="https://www.youtube.com/embed/DU0ktWago84" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="video-item">
+            <div class="video-inner">
+                <iframe height="400" src="https://www.youtube.com/embed/DU0ktWago84" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <h2>Video no scaling</h2>
+
+    <div class="video-container fade-carousel">
+            <div class="video-item">
+                <div class="video-inner">
+                    <iframe height="100%" src="https://www.youtube.com/embed/DU0ktWago84" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-inner">
+                    <iframe height="100%" src="https://www.youtube.com/embed/DU0ktWago84" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-inner">
+                    <iframe height="100%" src="https://www.youtube.com/embed/DU0ktWago84" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+</body>
+<script type="text/javascript" src="jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="slick.js"></script>
+<script type="text/javascript">
+	$('.fade-carousel').slick({
+	  dots: true,
+	  infinite: true,
+	  speed: 500,
+	  arrows: true,
+	  cssEase: 'linear'
+	});
+</script>
+</html>

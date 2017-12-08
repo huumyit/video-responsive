@@ -4,7 +4,7 @@
 <style>
   /* Using Aspect Ratio css 
  Link : https://www.w3schools.com/howto/howto_css_aspect_ratio.asp */
- 
+
   /* .video-block {
     width: 100%;
     height: 100%;
@@ -35,11 +35,17 @@
 
     // Figure out and save aspect ratio for each video
     $allVideos.each(function () {
-      $(this)
-        .data('aspectRatio', this.height / this.width)
-        // and remove the hard coded width/height
-        .removeAttr('height')
-        .removeAttr('width');
+      // $(this)
+      //   .data('aspectRatio', this.height / this.width)
+      //   // and remove the hard coded width/height
+      //   .removeAttr('height')
+      //   .removeAttr('width');
+      var self = $(this),
+      valAspectRatio = self.data('aspect-ratio');
+
+      self
+        .data('aspectRatio', valAspectRatio)
+        .removeAttr('data-aspect-ratio');
     });
 
     // When the window is resized
@@ -63,7 +69,9 @@
   <h2>Video does not scale</h2>
   <div class="video-block">
     <div class="video-inner">
-      <iframe width="16" height="9" frameborder="0" allowfullscreen="1" title="youtube video player" src="https://www.youtube.com/embed/z9Ul9ccDOqE?rel=0&amp;enablejsapi=1"
+      <!-- <iframe width="16" height="9" frameborder="0" allowfullscreen="1" title="youtube video player" src="https://www.youtube.com/embed/z9Ul9ccDOqE?rel=0&amp;enablejsapi=1"
+        data-youtube-control="data-youtube-control" data-loop="false"></iframe> -->
+      <iframe data-aspect-ratio="0.5625" frameborder="0" allowfullscreen="1" title="youtube video player" src="https://www.youtube.com/embed/z9Ul9ccDOqE?rel=0&amp;enablejsapi=1"
         data-youtube-control="data-youtube-control" data-loop="false"></iframe>
     </div>
   </div>
